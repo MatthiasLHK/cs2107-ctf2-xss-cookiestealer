@@ -6,5 +6,5 @@ app = Flask(__name__)
 def home_view():
     cookie = request.args.get('c')
     if(cookie == None):
-        cookie = LOL
+        cookie = "LOL"
     return "<h1>This is the cookie: {cookie}</h>"
