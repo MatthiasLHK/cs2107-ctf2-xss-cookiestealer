@@ -5,5 +5,6 @@ app = Flask(__name__)
 @app.route("/")
 def home_view():
     cookie = request.args.get('c')
-    print(cookie)
-    return "<h1>Welcome to Geeks for Geeks</h>"
+    if(cookie == None):
+        cookie = LOL
+    return "<h1>This is the cookie: {cookie}</h>"
